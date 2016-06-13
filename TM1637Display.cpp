@@ -64,11 +64,14 @@ TM1637Display::TM1637Display(uint8_t pinClk, uint8_t pinDIO)
 	
 	// Set colon off by default? Or change the constructor?
 	m_colon = false;
-	
+}
+
+void TM1637Display::init()
+{
 	// Set the pin direction and default value.
 	// Both pins are set as inputs, allowing the pull-up resistors to pull them up
-    pinMode(m_pinClk, INPUT);
-    pinMode(m_pinDIO,INPUT);
+	pinMode(m_pinClk, INPUT);
+	pinMode(m_pinDIO,INPUT);
 	digitalWrite(m_pinClk, LOW);
 	digitalWrite(m_pinDIO, LOW);
 }

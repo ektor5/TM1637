@@ -40,6 +40,9 @@ public:
   //! @param pinDIO - The number of the digital pin connected to the DIO pin of the module
   TM1637Display(uint8_t pinClk, uint8_t pinDIO);
   
+  //! Real initialization of the object, better done in the setup() function.
+  void init();
+  
   //! Sets the brightness of the display.
   //!
   //! The setting takes effect when a command is given to change the data being

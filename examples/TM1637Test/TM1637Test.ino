@@ -19,6 +19,7 @@ TM1637Display display(CLK, DIO);
 
 void setup()
 {
+  display.init();
 }
 
 void loop()
